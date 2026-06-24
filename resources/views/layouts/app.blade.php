@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="Research Hub provides premium research, thesis, statistical analysis, and website development services with professional support and confidentiality.">
     <meta name="theme-color" content="#3B0066">
+
     <meta property="og:title" content="Research Hub | Research Excellence & Digital Solutions">
     <meta property="og:description" content="Professional research assistance, thesis support, statistical analysis, and website development solutions for students, researchers, educators, and businesses.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url('/') }}">
+
     <title>{{ $pageTitle ?? 'Research Hub' }}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+
     @vite(['resources/css/app.css','resources/js/app.js'])
+
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="min-h-screen bg-white text-slate-800 antialiased">
