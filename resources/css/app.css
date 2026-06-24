@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body {
+    background-image: linear-gradient(120deg, rgba(59, 0, 102, 0.04) 0%, rgba(0, 140, 186, 0.03) 100%);
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.admin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: #3B0066;
+    color: #ffffff;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.admin-btn:hover {
+    background: #2d004f;
+    transform: translateY(-1px);
+}
+
+.admin-btn-secondary {
+    background: #008CBA;
+}
+
+.admin-btn-secondary:hover {
+    background: #05779d;
+}
+
+.admin-btn-outline {
+    border-color: #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+}
+
+.admin-btn-outline:hover {
+    border-color: #3B0066;
+    background: #f8fafc;
+    color: #3B0066;
+}
