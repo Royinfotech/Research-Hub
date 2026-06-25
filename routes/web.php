@@ -29,7 +29,6 @@ Route::delete('/admin/income/{incomeTransaction}', [AdminController::class, 'des
 Route::get('/admin/income/report.pdf', [AdminController::class, 'downloadIncomeStatement'])->name('admin.income.pdf');
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
-// Test email route
 Route::get('/test-email', function () {
     try {
         \Mail::raw('This is a test email from Research Hub', function ($message) {
