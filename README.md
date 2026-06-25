@@ -57,3 +57,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Deploying To Render
+
+This repo includes a Docker setup for Render.
+
+1. Create a new `Web Service` on Render from this repository.
+2. Choose `Docker` as the runtime.
+3. Set production environment variables in the Render dashboard.
+
+Example:
+
+```env
+APP_NAME=Research Hub
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://your-service.onrender.com
+APP_KEY=base64:...
+DB_CONNECTION=pgsql
+DATABASE_URL=postgresql://...
+```
+
+Render passes the `PORT` variable to the container, and the app starts with `php artisan serve` behind Render's proxy.
