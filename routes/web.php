@@ -28,3 +28,16 @@ Route::post('/admin/income', [AdminController::class, 'storeIncomeTransaction'])
 Route::delete('/admin/income/{incomeTransaction}', [AdminController::class, 'destroyIncomeTransaction'])->name('admin.income.destroy');
 Route::get('/admin/income/report.pdf', [AdminController::class, 'downloadIncomeStatement'])->name('admin.income.pdf');
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+
+// Test email route
+Route::get('/test-email', function () {
+    try {
+        \Mail::raw('This is a test email from Research Hub', function ($message) {
+            $message->to('alimaongroyvan@gmail.com')
+                    ->subject('Test Email');
+        });
+        return 'Email sent successfully!';
+    } catch (\Exception $e) {
+        return 'Error: ' . $e->getMessage();
+    }
+});
